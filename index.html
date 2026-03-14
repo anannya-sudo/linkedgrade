@@ -392,7 +392,7 @@
   <!-- RESULTS AREA -->
   <div id="results"></div>
   <footer>
-    built with curiosity by <span>Anannya</span> &nbsp;·&nbsp; powered by Claude AI
+    built with curiosity by <span>Anannya</span>
   </footer>
 </div>
 <script>
@@ -450,7 +450,7 @@ Scores are integers 1-10. Grade is A, B, C, D, or F only.`;
     // Using the provided free Gemini API key
     const GEMINI_API_KEY = "AIzaSyD6Zx3tr4FVY-QcYL0U_2C83MJeSFAhaCg";
     try {
-      const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+      const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json'
