@@ -16,7 +16,9 @@
       --paper: #faf8f2;
       --ink: #1a1a1a;
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       background: var(--off-white);
       font-family: 'Syne', sans-serif;
@@ -25,6 +27,7 @@
       overflow-x: hidden;
       cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='3' fill='%231a1a1a'/%3E%3C/svg%3E") 10 10, auto;
     }
+
     /* Grain overlay */
     body::before {
       content: '';
@@ -35,6 +38,7 @@
       z-index: 1000;
       opacity: 0.6;
     }
+
     /* Doodle bg dots */
     body::after {
       content: '';
@@ -45,6 +49,7 @@
       pointer-events: none;
       z-index: 0;
     }
+
     .page-wrap {
       position: relative;
       z-index: 1;
@@ -52,12 +57,14 @@
       margin: 0 auto;
       padding: 2rem 1.5rem 4rem;
     }
+
     /* ── HEADER ── */
     header {
       text-align: center;
       margin-bottom: 2.5rem;
       animation: fadeSlideDown 0.6s ease both;
     }
+
     .logo-tag {
       display: inline-block;
       font-family: 'Caveat', cursive;
@@ -71,6 +78,7 @@
       transform: rotate(-1.5deg);
       box-shadow: 2px 2px 0 var(--black);
     }
+
     h1 {
       font-family: 'Syne', sans-serif;
       font-size: clamp(2.8rem, 8vw, 4.5rem);
@@ -79,6 +87,7 @@
       letter-spacing: -0.02em;
       margin-bottom: 10px;
     }
+
     h1 span.linked { color: var(--black); }
     h1 span.grade {
       color: var(--black);
@@ -89,12 +98,14 @@
       transform: rotate(-0.8deg);
       box-shadow: 3px 3px 0 var(--black);
     }
+
     .tagline {
       font-family: 'Caveat', cursive;
       font-size: 18px;
       color: #555;
       margin-top: 8px;
     }
+
     /* ── SCRAPBOOK CARD ── */
     .card {
       background: var(--paper);
@@ -106,6 +117,7 @@
       margin-bottom: 1.5rem;
       animation: fadeSlideUp 0.5s ease both;
     }
+
     .card::before {
       content: attr(data-tape);
       position: absolute;
@@ -122,6 +134,7 @@
       white-space: nowrap;
       box-shadow: 2px 2px 0 #00000025;
     }
+
     .card-label {
       font-family: 'Caveat', cursive;
       font-size: 15px;
@@ -129,23 +142,7 @@
       margin-bottom: 8px;
       font-weight: 600;
     }
-    .api-key-input {
-      width: 100%;
-      background: transparent;
-      border: 2px dashed #aaa;
-      border-radius: 4px;
-      padding: 12px 14px;
-      font-family: 'DM Mono', monospace;
-      font-size: 13px;
-      color: var(--ink);
-      transition: border-color 0.2s;
-    }
-    .api-key-input:focus {
-      outline: none;
-      border-color: var(--black);
-      border-style: solid;
-    }
-    .api-key-input::placeholder { color: #bbb; font-style: italic; }
+
     textarea {
       width: 100%;
       min-height: 160px;
@@ -160,23 +157,28 @@
       line-height: 1.7;
       transition: border-color 0.2s;
     }
+
     textarea:focus {
       outline: none;
       border-color: var(--black);
       border-style: solid;
     }
+
     textarea::placeholder { color: #bbb; font-style: italic; }
+
     .bottom-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-top: 10px;
     }
+
     .char-count {
       font-family: 'Caveat', cursive;
       font-size: 14px;
       color: #999;
     }
+
     .btn-grade {
       font-family: 'Syne', sans-serif;
       font-size: 14px;
@@ -190,20 +192,24 @@
       transition: transform 0.1s, box-shadow 0.1s;
       letter-spacing: 0.02em;
     }
+
     .btn-grade:hover {
       transform: translate(-1px, -1px);
       box-shadow: 4px 4px 0 var(--black);
     }
+
     .btn-grade:active {
       transform: translate(2px, 2px);
       box-shadow: 1px 1px 0 var(--black);
     }
+
     .btn-grade:disabled {
       opacity: 0.5;
       cursor: not-allowed;
       transform: none;
       box-shadow: 3px 3px 0 var(--black);
     }
+
     /* ── LOADING ── */
     .loading {
       text-align: center;
@@ -213,7 +219,9 @@
       color: #666;
       animation: pulse 1.2s ease-in-out infinite;
     }
+
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
     /* ── GRADE BANNER ── */
     .grade-banner {
       display: flex;
@@ -221,6 +229,7 @@
       gap: 1.5rem;
       flex-wrap: wrap;
     }
+
     .grade-circle {
       width: 90px;
       height: 90px;
@@ -236,6 +245,7 @@
       box-shadow: 4px 4px 0 var(--black);
       animation: popIn 0.4s cubic-bezier(0.34,1.56,0.64,1) both;
     }
+
     .grade-right { flex: 1; min-width: 180px; }
     .grade-right .summary {
       font-size: 15px;
@@ -248,12 +258,14 @@
       font-size: 14px;
       color: #777;
     }
+
     /* ── SCORES ── */
     .scores-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
     }
+
     .score-item {
       background: var(--paper);
       border: 2px solid var(--black);
@@ -262,10 +274,12 @@
       box-shadow: 3px 3px 0 var(--black);
       animation: fadeSlideUp 0.4s ease both;
     }
+
     .score-item:nth-child(1) { animation-delay: 0.05s; }
     .score-item:nth-child(2) { animation-delay: 0.1s; }
     .score-item:nth-child(3) { animation-delay: 0.15s; }
     .score-item:nth-child(4) { animation-delay: 0.2s; }
+
     .score-name {
       font-family: 'Caveat', cursive;
       font-size: 15px;
@@ -273,6 +287,7 @@
       margin-bottom: 6px;
       color: #555;
     }
+
     .score-bar-track {
       height: 6px;
       background: #e0e0d8;
@@ -281,22 +296,26 @@
       overflow: hidden;
       margin-bottom: 6px;
     }
+
     .score-bar-fill {
       height: 100%;
       border-radius: 10px;
       transition: width 0.8s cubic-bezier(0.34,1.2,0.64,1);
     }
+
     .score-val {
       font-family: 'Syne', sans-serif;
       font-size: 20px;
       font-weight: 800;
     }
+
     /* ── FEEDBACK SECTIONS ── */
     .fb-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
     }
+
     .fb-block {
       background: var(--paper);
       border: 2px solid var(--black);
@@ -305,7 +324,9 @@
       box-shadow: 3px 3px 0 var(--black);
       animation: fadeSlideUp 0.4s ease both;
     }
+
     .fb-block.full { grid-column: 1 / -1; }
+
     .fb-block-label {
       font-family: 'Caveat', cursive;
       font-size: 13px;
@@ -315,18 +336,22 @@
       margin-bottom: 6px;
       color: #888;
     }
+
     .fb-block-text {
       font-size: 13px;
       line-height: 1.6;
       color: var(--ink);
       font-family: 'DM Mono', monospace;
     }
+
     .roast-block { background: #fff0f0; border-color: #e05252; }
     .roast-block .fb-block-label { color: #e05252; }
     .roast-block .fb-block-text { color: #c03030; }
+
     .fix-block { background: #f0fff4; border-color: #3ab56a; }
     .fix-block .fb-block-label { color: #2a9a52; }
     .fix-block .fb-block-text { color: #1a7a3a; }
+
     /* ── ERROR ── */
     .error-msg {
       font-family: 'Caveat', cursive;
@@ -335,6 +360,7 @@
       text-align: center;
       padding: 1rem;
     }
+
     /* ── FOOTER ── */
     footer {
       text-align: center;
@@ -343,24 +369,29 @@
       font-size: 15px;
       color: #aaa;
     }
+
     footer span { color: var(--black); font-weight: 600; }
+
     /* ── ANIMATIONS ── */
     @keyframes fadeSlideDown {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
     @keyframes fadeSlideUp {
       from { opacity: 0; transform: translateY(16px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
     @keyframes popIn {
       from { opacity: 0; transform: scale(0.5); }
       to { opacity: 1; transform: scale(1); }
     }
+
     /* staggered card animations */
     .card:nth-child(1) { animation-delay: 0.1s; }
     .card:nth-child(2) { animation-delay: 0.2s; }
-    .card:nth-child(3) { animation-delay: 0.3s; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 520px) {
       .scores-grid { grid-template-columns: 1fr; }
@@ -371,7 +402,9 @@
   </style>
 </head>
 <body>
+
 <div class="page-wrap">
+
   <!-- HEADER -->
   <header>
     <div class="logo-tag">✦ AI-powered feedback</div>
@@ -380,6 +413,7 @@
     </h1>
     <p class="tagline">paste your post. get a grade. fix it. post better.</p>
   </header>
+
   <!-- INPUT CARD -->
   <div class="card" data-tape="✎ your post goes here">
     <div class="card-label">paste your LinkedIn post below ↓</div>
@@ -389,22 +423,28 @@
       <button class="btn-grade" id="gradeBtn">Grade it →</button>
     </div>
   </div>
+
   <!-- RESULTS AREA -->
   <div id="results"></div>
+
   <footer>
-    built with curiosity by <span>Anannya</span>
+    built with curiosity by <span>Anannya</span> &nbsp;·&nbsp; powered with Antigravity
   </footer>
+
 </div>
+
 <script>
   const input = document.getElementById('postInput');
   const charCount = document.getElementById('charCount');
   const btn = document.getElementById('gradeBtn');
   const results = document.getElementById('results');
+
   input.addEventListener('input', () => {
     const len = input.value.length;
     charCount.textContent = len + ' / 3000 chars';
     charCount.style.color = len > 2800 ? '#e05252' : '#999';
   });
+
   const gradeColors = {
     A: { bg: '#b8f07a', text: '#1a5c00' },
     B: { bg: '#a8d8f0', text: '#0a3d5c' },
@@ -412,10 +452,11 @@
     D: { bg: '#f7c8a0', text: '#7a3000' },
     F: { bg: '#f7b0b0', text: '#7a0000' },
   };
+
   const scoreColor = n => n >= 8 ? '#3ab56a' : n >= 6 ? '#e09a20' : '#e05252';
+
   btn.addEventListener('click', async () => {
     const post = input.value.trim();
-    
     if (!post) {
       results.innerHTML = '<p class="error-msg">✦ paste something first, bestie</p>';
       return;
@@ -424,13 +465,17 @@
       results.innerHTML = '<p class="error-msg">✦ too long! LinkedIn max is 3000 chars</p>';
       return;
     }
+
     btn.disabled = true;
     results.innerHTML = '<div class="loading">analyzing your post... hang tight ✦</div>';
+
     const prompt = `You are a brutally honest but helpful LinkedIn content coach. Analyze this LinkedIn post and respond ONLY with a valid JSON object — no markdown, no backticks, no explanation whatsoever. Just raw JSON.
+
 Post to analyze:
 """
 ${post}
 """
+
 Return exactly this JSON structure:
 {
   "grade": "A",
@@ -446,37 +491,35 @@ Return exactly this JSON structure:
   "roast": "one funny, sharp roast of the post's biggest weakness (under 20 words)",
   "fix": "one very specific concrete action to improve this post right now"
 }
+
 Scores are integers 1-10. Grade is A, B, C, D, or F only.`;
-    // Using the provided free Gemini API key
-    const GEMINI_API_KEY = "AIzaSyD6Zx3tr4FVY-QcYL0U_2C83MJeSFAhaCg";
+
     try {
-      const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`, {
+      const resp = await fetch('https://openrouter.ai/api/v1/chat/completions', {
         method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json'
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer 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'
         },
         body: JSON.stringify({
-          contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: {
-            responseMimeType: "application/json"
-          }
+          model: 'mistralai/mistral-7b-instruct:free',
+          messages: [{ role: 'user', content: prompt }]
         })
       });
+
       if (!resp.ok) {
-        let errStr = resp.status;
-        try {
-          const err = await resp.json();
-          errStr = err.error?.message || resp.status;
-        } catch(e) {}
-        results.innerHTML = `<p class="error-msg">API error: ${errStr}</p>`;
+        const err = await resp.json();
+        results.innerHTML = `<p class="error-msg">API error: ${err.error?.message || resp.status}</p>`;
         btn.disabled = false;
         return;
       }
+
       const data = await resp.json();
-      const rawText = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+      const rawText = data.choices[0].message.content;
       const jsonMatch = rawText.match(/\{[\s\S]*\}/);
       if (!jsonMatch) throw new Error('no JSON in response');
       const r = JSON.parse(jsonMatch[0]);
+
       const gc = gradeColors[r.grade] || gradeColors['C'];
       const scores = [
         { label: 'Hook', val: r.hook },
@@ -484,6 +527,7 @@ Scores are integers 1-10. Grade is A, B, C, D, or F only.`;
         { label: 'Tone', val: r.tone },
         { label: 'CTA', val: r.cta },
       ];
+
       const scoresHTML = scores.map(s => `
         <div class="score-item">
           <div class="score-name">${s.label}</div>
@@ -492,6 +536,7 @@ Scores are integers 1-10. Grade is A, B, C, D, or F only.`;
           </div>
           <div class="score-val" style="color:${scoreColor(s.val)}">${s.val}<span style="font-size:13px;color:#aaa">/10</span></div>
         </div>`).join('');
+
       results.innerHTML = `
         <div class="card" data-tape="✦ your grade">
           <div class="grade-banner">
@@ -502,9 +547,11 @@ Scores are integers 1-10. Grade is A, B, C, D, or F only.`;
             </div>
           </div>
         </div>
+
         <div class="card" data-tape="📊 scores">
           <div class="scores-grid">${scoresHTML}</div>
         </div>
+
         <div class="card" data-tape="📝 detailed feedback">
           <div class="fb-grid">
             <div class="fb-block">
@@ -533,12 +580,13 @@ Scores are integers 1-10. Grade is A, B, C, D, or F only.`;
             </div>
           </div>
         </div>`;
+
     } catch (err) {
       results.innerHTML = `<p class="error-msg">something broke: ${err.message}</p>`;
     }
+
     btn.disabled = false;
   });
 </script>
 </body>
 </html>
-
